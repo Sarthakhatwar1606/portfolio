@@ -33,3 +33,7 @@ img{
 img:hover{
   transform:scale(1.2);
 }
+.hobbies:hover{
+  transform:scale(1.07);
+}
+

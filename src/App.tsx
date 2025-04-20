@@ -1,6 +1,5 @@
 import { Github, Linkedin, Mail, Twitter, ArrowUp, Brain, Code, Award, Briefcase, Book, Send } from "lucide-react";
 
-import styles from "./hobbies.module.css"
 import jsIcon from "../assets/JavaScript.svg";
 import ReactIcon from "../assets/React-Light.svg";
 import HtmlIcon from "../assets/HTML.svg";
@@ -11,6 +10,7 @@ import FIcon from "../assets/Flutter-Light.svg";
 import AngIcon from "../assets/Angular-Light.svg";
 import PmanIcon from "../assets/Postman.svg";
 import FbIcon from "../assets/Firebase-Light.svg";
+import colabIcon from "../assets/Google_Colaboratory_SVG_Logo.svg.png";
 
 import DjIcon from "../assets/Django.svg";
 import FkIcon from "../assets/Flask-Light.svg";
@@ -60,6 +60,14 @@ import hobby4 from "/gym.jpg";
 import hobby5 from "/medi.jpg";
 import hobby6 from "/photo.jpg";
 import ggplot2Icon from "/assets/Ggplot2_hex_logo.svg.png"
+import LangIcon from "../assets/langchain.webp"
+import TableauIcon from "../assets/tableau-icon.svg"
+import PowerBi from "../assets/Power_BI.png"
+import googlecharts from "../assets/googlecharts.png"
+import excel from "../assets/excel.svg"
+import Seaborn from "../assets/seaborn.svg"
+import Spark from "../assets/Apache Spark.svg"
+import matplot from "../assets/matplot.png"
 
 
 const dataScienceSkills = [
@@ -73,9 +81,9 @@ const dataScienceSkills = [
   { name: "Numpy", icon: numpy },
   { name: "Pandas", icon: pandas },
   { name: "Anaconda", icon: AnIcon },
-  { name: "GoogleColab", icon: RIcon },
+  { name: "GoogleColab", icon: colabIcon },
   { name: "Scala", icon: ScalaIcon },
-  { name: "LagnChain", icon: RIcon },
+  { name: "LangChain", icon: LangIcon },
   
  
 ];
@@ -83,14 +91,14 @@ const dataScienceSkills = [
 const visualizationSkills = [
 
   {name: "ggplot2", icon: ggplot2Icon },
-  {name: "Matplotlib", icon: mongoIcon },
+  {name: "Matplotlib", icon: matplot },
   
   { name: "R", icon: RIcon },
-  { name: "Tableau", icon: RIcon },
-  { name: "PowerBI", icon: RIcon },
-  { name: "GoogleCharts", icon: RIcon },
-  { name: "Excel", icon: RIcon },
-  { name: "Seaborn", icon: RIcon },
+  { name: "Tableau", icon: TableauIcon },
+  { name: "PowerBI", icon: PowerBi },
+  { name: "GoogleCharts", icon: googlecharts },
+  { name: "Excel", icon: excel },
+  { name: "Seaborn", icon: Seaborn },
 
   
   
@@ -112,13 +120,15 @@ const otherSkills = [
   { name: "GCP", icon: GcpIcon },
   { name: "AWS", icon: AWsIcon },
   { name: "Azure", icon: AzIcon },
-  { name: "RasberryPi", icon: RasIcon },
+  { name: "MongoDB", icon: mongoIcon },
+
+
   { name: "Linux", icon: LIcon },
   { name: "JavaScript", icon: jsIcon },
   { name: "React", icon: ReactIcon },
   { name: "HTML", icon: HtmlIcon },
   { name: "Angular", icon: AngIcon },
-  { name: "Spark", icon: RIcon },
+  { name: "Apache Spark", icon: Spark },
 ];
 
 function SkillsSection() {
@@ -649,10 +659,10 @@ function App() {
             <span className="mr-4 text-pink-500">🎯</span>
             Hobbies
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1  md:grid-cols-4 gap-6">
             <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
-                <img src={hobby1} alt="i1" className={styles.hobbies} />
+                <img src={hobby1} alt="i1" className= "h-15 hobbies"  />
               </div>
               <h1 className="text-xl font-semibold text-center">Reading Tech Blogs</h1>
             </div>
@@ -676,19 +686,19 @@ function App() {
               <h1 className="text-xl font-semibold text-center">Fitness & Gym</h1>
             </div>
 
-            <div className="p-6 border rounded-lg bg-white shadow-2xl">
+            {/* <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
                 <img src={hobby5} alt="i4" className="h-15 hobbies" />
               </div>
               <h1 className="text-xl font-semibold text-center">Meditation</h1>
-            </div>
+            </div> */}
 
-            <div className="p-6 border rounded-lg bg-white shadow-2xl">
+            {/* <div className="p-6 border rounded-lg bg-white shadow-2xl">
               <div className="flex items-center mb-2">
                 <img src={hobby6} alt="i4" className="h-15 hobbies" />
               </div>
               <h1 className="text-xl font-semibold text-center">Photography</h1>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
