@@ -12,6 +12,7 @@ import PmanIcon from "../assets/Postman.svg";
 import FbIcon from "../assets/Firebase-Light.svg";
 import colabIcon from "../assets/Google_Colaboratory_SVG_Logo.svg.png";
 
+import Tokyo from "/tokyo-olympics.jpg";
 import DjIcon from "../assets/Django.svg";
 import FkIcon from "../assets/Flask-Light.svg";
 import SpIcon from "../assets/Spring-Light.svg";
@@ -47,6 +48,7 @@ import displayPic from "/IMG_4479.jpg";
 import uta from "/University_of_Texas_at_Arlington_seal.png";
 import mit from "/MITADT.png";
 import codon from "/Codontech.jpeg";
+import cisco from "/cisco.png";
 import project1 from "/customer.png.webp";
 import project2 from "/defect.webp";
 import project3 from "/parkinson.jpg";
@@ -366,8 +368,47 @@ function App() {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Data Engineer Intern</h3>
+                <p className="text-gray-600">CISCO </p>
+                <p className="text-gray-500">Jun 2024 - May 2025</p>
+              </div>
+              <img src={cisco} alt="Cisco" className="h-8" />
+            </div>
+            <ul className="mt-4 ml-4 space-y-2 list-disc list-outside text-gray-600 text-justify">
+              <li>
+                Designed and developed scalable ETL pipelines using Python and Apache Spark to process large volumes of network telemetry data.
+              </li>
+
+              <li>
+                Integrated data from various Cisco internal systems (e.g., Meraki, Webex) into a unified data lake using AWS Glue and S3.
+              </li>
+              <li>
+                Automated data quality checks using PyDeequ and implemented logging/monitoring via CloudWatch and Splunk.
+              </li>
+
+              <li>
+                Created dashboards in Power BI/Tableau to help stakeholders monitor key metrics like device uptime, traffic patterns.
+              </li>
+            </ul>
+            <h1 className="mt-4 text-xl font-bold text-center flex items-center">
+              <Code className="mr-2 text-green-500" />
+              Skills Acquired
+            </h1>
+
+            <div className="flex mt-2 flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
+              {["AWS Glue", "AWS S3", "Apache Spark", "DataBricks", "Tableau", "CNN", "ETL Pipelines", "MySQL"].map((skill, index) => (
+                <span key={index} className="bg-gray-700 text-gray-200 text-bold text-sm px-4 py-1 rounded-full">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
+            <div className="flex items-start justify-between">
+              <div>
+                <h3 className="text-2xl font-semibold mb-2">Data Analyst</h3>
                 <p className="text-gray-600">CODON Tech </p>
-                <p className="text-gray-500">August 2022 - July 2022</p>
+                <p className="text-gray-500">August 2022 - July 2023</p>
               </div>
               <img src={codon} alt="Codon" className="h-8" />
             </div>
@@ -421,9 +462,49 @@ function App() {
           <div className="bg-white p-6 rounded-xl shadow-2xl">
             <div className="flex items-start justify-between">
               <div>
-                <h3 className="text-2xl font-semibold mb-2">Customer Churn Prediction</h3>
+                <h3 className="text-2xl font-semibold mb-2">Tokyo Olympics Data Analysis</h3>
+              </div>
+              <img src={Tokyo} className="h-8" />
+            </div>
+            <ul className="mt-4 ml-4 space-y-2 list-disc list-outside text-gray-600 text-justify">
+              <li>
+                Successfully migrated on-premises SQL Server databases to Azure using Azure Data Factory (ADF), implementing secure,
+real-time synchronization through Azure Key Vault and Active Directory.
+              </li>
 
-                <p className="text-gray-500">Spetember 2024 - Januray 2025</p>
+              <li>
+                This enabled centralized, scalable data access in Azure Data Lake Gen2 for downstream analytics.
+              </li>
+              <li>
+                Utilized Azure Databricks and Synapse Analytics to clean, transform, and optimize large-scale datasets, building a robust data foundation that
+supported advanced querying and near real-time processing.
+              </li>
+
+              <li>
+                Designed and deployed dynamic Tableau dashboards leveraging SQL Window Functions to uncover performance trends and insights in sports data,
+empowering stakeholders with real-time analytics for faster decision-making.
+              </li>
+            </ul>
+            <h1 className="mt-4 text-xl font-bold text-center flex items-center">
+              <Code className="mr-2 text-green-500" />
+              Tools Used
+            </h1>
+
+            <div className="flex mt-2 flex-wrap gap-3 bg-gray-100 p-4 rounded-lg">
+              {[
+                "Azure", "DataLake Gen2", "ADF", "SQL", "DataBricks", "Tableau"
+              ].map((skill, index) => (
+                <span key={index} className="bg-gray-700 text-gray-200 text-bold text-sm px-4 py-1 rounded-full">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-2xl mt-6">
+            <div className="flex items-start justify-between">
+              <div>
+                <h3 className="text-2xl font-semibold mb-2">Customer Churn Prediction</h3>
               </div>
               <img src={project1} className="h-8" />
             </div>
@@ -476,8 +557,6 @@ function App() {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Defect detection on metallic components using object detection models</h3>
-
-                <p className="text-gray-500">Janurary 2024 - April 2024</p>
               </div>
               <img src={project2} className="h-8" />
             </div>
@@ -515,8 +594,6 @@ function App() {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Parkinson’s Disease Detection using Handwriting</h3>
-
-                <p className="text-gray-500">September 2022 - May 2023</p>
               </div>
               <img src={project3} className="h-8" />
             </div>
@@ -555,8 +632,6 @@ function App() {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Knowledge Distillation</h3>
-
-                <p className="text-gray-500">February 2022 - May 2022</p>
               </div>
               <img src={project4} className="h-8" />
             </div>
